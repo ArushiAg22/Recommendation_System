@@ -70,7 +70,7 @@ Describe the datasets you are using to answer your research questions.
 | 18 | backdrop_path        | object  | Link to the movie backdrop          |
 | 19 | recommendations      | object  | Ids of recommended movies           |
 
-Potential values (for categorical valuables, what are the categories?)
+#### Potential values (for categorical valuables, what are the categories?)
 
 **status:** Released, Planned, In Production, Post Production, Canceled, Rumored
 
@@ -78,10 +78,10 @@ Potential values (for categorical valuables, what are the categories?)
 
 **genres:** There are more than 10000 combinations of different genres which might get divided into separate columns on later stage
 
-Which variable/column will be your target/label in your ML model?
+#### Which variable/column will be your target/label in your ML model?
 
 This is unsupervised learning model
 
-Which variables/columns may be selected as features/predictors for your ML models?
+#### Which variables/columns may be selected as features/predictors for your ML models?
 
 title, genres, original_language, overview, tagline, keywords
