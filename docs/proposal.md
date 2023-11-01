@@ -1,6 +1,6 @@
 ## 1. Title and Author
 
-- Project Title: Recommendation System for Movies
+- Project Title: Recommendation System
 - Prepared for UMBC Data Science Master Degree Capstone by Dr Chaojie (Jay) Wang
 - Author Name: Arushi Agarwal
 - Link to the author's GitHub profile: https://github.com/ArushiAg22
@@ -11,40 +11,44 @@
 ## 2. Background
 
 ### What is it about?
-In today's digital age, the entertainment industry has witnessed an explosion of content production, particularly in the realm of movies. With thousands of movies being released each year, it has become increasingly challenging for viewers to discover films that align with their preferences and interests. This issue is exacerbated by the proliferation of streaming platforms, which offer extensive libraries of movies and TV shows, making it difficult for users to navigate and choose what to watch. Moreover these platforms just recommend the movies that they host on their websites which means either the user has to go to each streaming platform to look for their preferred movie or go ahead with the recommendation of that particular platform. To address this problem and enhance the user experience, I propose the development of a Movie Recommendation System.
+In the age of digital content consumption, the vast array of movies, shows, and books available can be overwhelming for users. With thousands of movies, shows and books being released each year, it has become increasingly challenging for viewers to discover films that align with their preferences and interests. This issue is exacerbated by the proliferation of streaming platforms, which offer extensive libraries of movies and TV shows, making it difficult for users to navigate and choose what to watch. Moreover, these platforms just recommend the movies that they host on their websites which means either the user has to go to each streaming platform to look for their preferred movie or go ahead with the recommendation of that particular platform. To address this problem and enhance the user experience, I propose the development of a Recommendation System for Movies, TV Shows and Books.
 
-This capstone project aims to develop a Movie Recommendation System that provides personalized movie recommendations to users based on their selected movie. This system will leverage the power of machine learning and data analysis to offer users a tailored list of the top 5 movies they are likely to enjoy after selecting a particular movie.
+This capstone project aims to develop a Recommendation System that provides personalized recommendations to users based on their selection. This system will leverage the power of machine learning algorithms, data analysis and natural language processing techniques, to offer users a tailored list of the top 5 recommendations they are likely to enjoy after selecting a particular movie, TV show or book. our goal is to create an innovative solution that revolutionizes how users interact with digital content, making their entertainment and reading experiences more personalized and enjoyable.
 
 ### Why does it matter?
 
-The Movie Recommendation System is significant for several reasons:
+The Recommendation System is significant for several reasons:
 
-**Enhanced User Experience:** By offering personalized movie recommendations, we can improve the overall user experience on movie streaming platforms. Users will spend less time searching for movies and more time enjoying them.
+**Enhanced User Experience:** A personalized recommendation system ensures that users discover content that aligns with their interests, leading to a more satisfying and engaging experience.
 
-**Increased Engagement:** A well-executed recommendation system can boost user engagement and retention on streaming platforms, leading to increased user satisfaction and loyalty.
+**Increased Engagement:** A well-executed recommendation system can boost user engagement and retention on the platforms, leading to increased user satisfaction and loyalty.
 
-**Revenue Generation:** Streaming platforms often rely on user engagement to generate revenue through subscriptions and advertisements. A successful recommendation system can drive more users to these platforms.
+**Revenue Generation:** For platforms offering digital content, personalized recommendations can lead to increased content consumption, directly impacting revenue generation through subscriptions, purchases, or advertisements.
 
-**Content Discovery:** The movie industry benefits from users exploring a wider range of films. This can help lesser-known movies gain visibility and improve the diversity of content consumption.
+**Content Discovery:** The entertainment industry benefits from users exploring a wider range of content. This can help lesser-known movies, TV shows and books gain visibility and improve the diversity of content consumption.
 
 ### What are your research questions?
 
 This project will focus on answering the following research questions:
 
-1. How can we collect and preprocess movie data for building a recommendation system?
-2. Which recommendation algorithm(s) will be most suitable for our Movie Recommendation System?
-3. What impact does the availability of metadata (e.g., movie descriptions, cast, crew) have on recommendation accuracy?
-4. What are the implications of implementing a hybrid recommendation system that combines collaborative filtering and content-based approaches?
+1. How can we collect and preprocess movie, TV show and Books data for building a recommendation system?
+2. How can content features such as genre, keywords, metadata, and textual descriptions be effectively extracted and utilized to create accurate item profiles for movies, shows, and books?
+3. How can natural language processing (NLP) and text analysis be leveraged to analyze textual content descriptions and summaries for better content matching in recommendation systems?
+4. Which recommendation algorithm(s) will be most suitable for our Recommendation System?
 
 ## 3. Data 
 
 Describe the datasets you are using to answer your research questions.
 
+I am using 3 datasets here-
+
+### Dataset 1
+
 - Data sources: Movies Daily Update Dataset [Link](https://www.kaggle.com/datasets/akshaypawar7/millions-of-movies)
 - Data size: 350 MB
-- Data shape (# of rows and # columns): 722710 rows and 20 columns
-- Time period (for example, 2010 to 2020) if your data are time-bound: Till 2023
-- **What does each row represent?(a patient, a school, a crime, etc.)**: Each row represents a movie
+- Data shape: 722710 rows and 20 columns
+- Time period: 1970 to 2023
+- **What does each row represent?**: A movie
 - Data dictionary
  
 | #  | Column               | Dtype   | Definition                          |
@@ -74,9 +78,9 @@ Describe the datasets you are using to answer your research questions.
 
 **status:** Released, Planned, In Production, Post Production, Canceled, Rumored
 
-**original_language:** There are 167 categories
+**original_language:** There are 167 languages but I will just select movies which are in English
 
-**genres:** There are more than 10000 combinations of different genres which might get divided into separate columns on later stage
+**genres:** There are more than 10000 combinations of different 19 different genres
 
 #### Which variable/column will be your target/label in your ML model?
 
@@ -84,4 +88,121 @@ This is unsupervised learning model
 
 #### Which variables/columns may be selected as features/predictors for your ML models?
 
-title, genres, original_language, overview, tagline, keywords
+title, genres, overview, tagline, keywords
+
+### Dataset 2
+
+- Data sources: TV Series Dataset [Link](https://www.kaggle.com/datasets/bourdier/all-tv-series-details-dataset/data)
+- Data size: 250 MB
+- Data shape: 152970 rows and 188 columns
+- Time period: Till 2023
+- **What does each row represent?**: A TV show
+- Data dictionary
+
+There are more than 188 columns so I will just mention main ones.
+
+| #  | Column                                   | Dtype   | Definition                          |
+|----|------------------------------------------|---------|-------------------------------------|
+| 0  | id                                       | int64   | Id of the Show                      |
+| 1  | name                                     | object  | Show title                          |
+| 2  | original_name                            | object  | Original name of the Show           |
+| 3  | overview                                 | object  | Summary of the Show                 |
+| 4  | tagline                                  | object  | Tagline of the Show                 |
+| 5  | in_production                            | object  | If it is in-production or not       |
+| 6  | status                                   | object  | Status of the Show                  |
+| 7  | original_language                        | object  | Original language of the Show       |
+| 8  | origin_country[0]                        | object  | Original country of the Show        |
+| 9  | first_air_date                           | object  | Date pilot was released             |
+| 10 | last_air_date                            | object  | Date last episode was released      |
+| 11 | number_of_episodes                       | int64   | Total no. of episodes               |
+| 12 | number_of_seasons                        | int64   | No. of Seasons                      |
+| 13 | poster_path                              | object  | Link to the Show poster             |
+| 14 | genres[0].name                           | object  | Genre of the show                   |
+| 15 | vote_average                             | float64 | Average of votes received           |
+| 16 | vote_count                               | int64   | Total votes received                |
+| 17 | created_by[0].name                       | object  | Creator's name                      |
+| 18 | production_companies[0].name             | object  | Production company name             |
+| 19 | production_companies[0].origin_country   | object  | Country of Production company       |
+
+#### Potential values (for categorical valuables, what are the categories?)
+
+**in_production:** True, False
+
+**status:** Returning Series, Planned, In Production, Pilot, Canceled, Ended
+
+**original_language:** There are 105 languages but I will just select Shows which are in English
+
+**genres:** There are more than 800 combinations of 23 different genres
+
+#### Which variable/column will be your target/label in your ML model?
+
+This is unsupervised learning model
+
+#### Which variables/columns may be selected as features/predictors for your ML models?
+
+name, genres, original_language, overview, tagline, created_by
+
+### Dataset 3
+
+- Data sources: Best Books (10k) Multi-Genre Data [Link](https://www.kaggle.com/datasets/ishikajohari/best-books-10k-multi-genre-data)
+- Data size: 11.75 MB
+- Data shape: 10000 rows and 8 columns
+- Time period: Till 2023
+- **What does each row represent?**: A book
+- Data dictionary
+ 
+| #  | Column            | Dtype   | Definition                             |
+|----|-------------------|---------|----------------------------------------|
+| 0  | Book              | object  | Name of the Book                       |
+| 1  | Author            | object  | Author's Name                          |
+| 2  | Description       | object  | Summary of the Book                    |
+| 3  | Genres            | object  | List of Genres of that Book            |
+| 4  | Avg_Rating        | float64 | Average of Ratings received            |
+| 5  | Num_Ratings       | object  | Total no. of Ratings received          |
+| 6  | URL               | object  | URL to that book on GoodReads website  |
+
+#### Potential values (for categorical valuables, what are the categories?)
+
+**genres:** There are more than 8000 combinations of more than 20 different genres
+
+#### Which variable/column will be your target/label in your ML model?
+
+This is unsupervised learning model
+
+#### Which variables/columns may be selected as features/predictors for your ML models?
+
+Book, Author, Description, Genres
+
+## 4. Exploratory Data Analysis (EDA)
+
+### Dataset 1
+#### Data Cleaning
+1. Dropped 'backdrop_path' and 'recommendations' columns since I don't need them.
+2. Removed duplicate rows
+3. Removed rows where title was missing
+4. Dropped the rows where Movie was not in English Language
+5. Removed Rows where genres and overview both were not there since they both are the main features
+6. Filled missing values with "" as I don't want to hinder the result by adding specific word
+7. Sanity check for numerical variables
+
+#### EDA
+
+
+
+
+#### Data Preparation
+1. Dropped the movies which are not Released.
+2. Dropped the movies that were released before 1970
+3. Dropped the movies with 20 or lesser votes since we want to recommend movies that have got atleast some votes.
+4. Replaced "-" with " " in geners, keyword, credits column
+5. Created Tags column which is a combination of Overview, genres, credits, keywords and tagline columns.
+6. Words in Tags column in converted into lower case
+7. Stemming is done for Tags Column so that we can further implement Content-based recommendation algorithms.
+
+### Dataset 2
+
+
+
+
+
+### Dataset 3
