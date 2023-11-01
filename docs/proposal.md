@@ -174,6 +174,7 @@ This is unsupervised learning model
 Book, Author, Description, Genres
 
 ## 4. Exploratory Data Analysis (EDA)
+Before creating the model, it is important to understand our data. I did that in 3 steps for each dataset- Data Cleaning, EDA, Data Pre-Processing.
 
 ### Dataset 1
 #### Data Cleaning
@@ -183,26 +184,122 @@ Book, Author, Description, Genres
 4. Dropped the rows where Movie was not in English Language
 5. Removed Rows where genres and overview both were not there since they both are the main features
 6. Filled missing values with "" as I don't want to hinder the result by adding specific word
-7. Sanity check for numerical variables
+7. Sanity check for numerical variables was done
 
 #### EDA
+Bar plot for Movie Genres
+![image](https://github.com/DATA-606-2023-FALL-TUESDAY/Agarwal_Arushi/blob/main/data/Plots/Movies_genres.png)
+Through this plot, we can see that the dataset contains movies from all genres.
 
+Plt for Movie Release Years
+![image](https://github.com/DATA-606-2023-FALL-TUESDAY/Agarwal_Arushi/blob/main/data/Plots/Movie_year.png)
+This plot shows that this dataset contains movies from 1896 to 2023. After looking at this plot, I decided to consider movies which were released after 1970.
 
-
+Pie Chart for Movie Status
+![image](https://github.com/DATA-606-2023-FALL-TUESDAY/Agarwal_Arushi/blob/main/data/Plots/Movie_status.png)
+This plot shows that movies fall under 1 of the 6 status categories. After looking at this plot, I decided to consider movies which have already released.
 
 #### Data Preparation
-1. Dropped the movies which are not Released.
+1. Dropped the movies which are not yet Released.
 2. Dropped the movies that were released before 1970
 3. Dropped the movies with 20 or lesser votes since we want to recommend movies that have got atleast some votes.
 4. Replaced "-" with " " in geners, keyword, credits column
-5. Created Tags column which is a combination of Overview, genres, credits, keywords and tagline columns.
+5. Created Tags column which is a combination of overview, genres, credits, keywords and tagline columns.
 6. Words in Tags column in converted into lower case
 7. Stemming is done for Tags Column so that we can further implement Content-based recommendation algorithms.
 
 ### Dataset 2
+#### Data Cleaning
+1. Removed duplicate rows
+2. Removed rows where name of the show was missing
+3. Dropped the rows where Movie was not in English Language
+4. Since there are 188 columns, I dropped columns that were ot needed. After this step, we were left with 33 columns only.  
+5. Dropped rows where genres or created_by was empty
+6. Each genre of the show was given in single column so I created a new column called genres by combining all these genres columns.
+7. Each creator of the show was given in single column so I created a new column called created_by by combining all these created_by columns.
+8. Filled missing values with "" as I don't want to hinder the result by adding specific word
+9. Sanity check for numerical variables was done
 
+#### EDA
+Bar plot for Show Genres
+![image](https://github.com/DATA-606-2023-FALL-TUESDAY/Agarwal_Arushi/blob/main/data/Plots/Show_genres.png)
+Through this plot, we can see that the dataset contains shows from all genre types mostly Comedy and Drama.
 
+Pie Chart for Show Status
+![image](https://github.com/DATA-606-2023-FALL-TUESDAY/Agarwal_Arushi/blob/main/data/Plots/Show_status.png)
+This plot shows that shows fall under 1 of the 6 status categories. After looking at this plot, I decided to consider shows whose atleast Pilot has been released.
 
-
+#### Data Preparation
+1. Dropped the shows whose Pilot atleast has been released.
+2. Created Tags column which is a combination of overview, genres, created_by and tagline columns.
+6. Words in Tags column in converted into lower case
+7. Stemming is done for Tags Column so that we can further implement Content-based recommendation algorithms.
 
 ### Dataset 3
+#### Data Cleaning
+1. Dropped 'Unnamed: 0' column.
+2. Check if there were any duplicate rows.
+3. Removed rows where name of the book was duplicate.
+4. Genres were given as a list. This column was converted into " " separated string.
+5. Num_Rating column was converted into integer type.
+6. Filled missing values with "" as I don't want to hinder the result by adding specific word
+8. Sanity check for numerical variables was done.
+
+#### EDA
+Bar plot for Show Genres
+![image](https://github.com/DATA-606-2023-FALL-TUESDAY/Agarwal_Arushi/blob/main/data/Plots/Book_genres.png)
+This dataset contains books with more than 20 genres. Here I have created a plot for top 20 genres. Fiction is the most common genre.
+
+Bar Plot for top 20 authors
+![image](https://github.com/DATA-606-2023-FALL-TUESDAY/Agarwal_Arushi/blob/main/data/Plots/Book_authors.png)
+This plot shows that this dataset contains around 38 books by William Shakespeare.
+
+#### Data Preparation
+1. Created Tags column which is a combination of Description, Genres and Author columns.
+2. Words in Tags column in converted into lower case
+3. Stemming is done for Tags Column so that we can further implement Content-based recommendation algorithms.
+
+## 5. Model Training 
+
+- What models you will be using for predictive analytics?
+
+  I am using 2 techniques here- Count Vectorization and TF-IDF (Term Frequency-Inverse Document Frequency)
+
+  Count Vectorization is a technique used to convert a collection of textual data (such as summary, genres) into numerical vectors. It works by counting how many times each word appears.
+
+  TF-IDF is a numerical statistic that reflects the importance of a word in a document relative to a collection of documents. TF-IDF gives importance to words based on how often they appear in a document but not too commonly across all documents. It's like finding the unique words in a document.
+
+  I created a hybrid (Counter Vectorization + TFIDF) model to give better recommendations.
+
+- How will you train the models?
+  - I am using Cosine Similarity to train the models. Since it is recommendation system, we don't train and test data
+  - Python packages used - NLTK, PorterStemmer, CountVectorizer, cosine_similarity, TfidfVectorizer, linear_kernel
+  - The development environments includes - Personal Laptop, Jupyter Notebook and PyCharm
+- How will you measure and compare the performance of the models?
+  
+  For the current phase of the project, I am manually evaluating the recommendations to assess their relevance and coherence. This hands-on approach allows me to intuitively gauge if the suggestions align with users' selections.
+
+## 6. Application of the Trained Models
+I have used Streamlit to create an interactive web app for this Recommendation system.
+
+## 7. Conclusion
+In summary, this project focused on developing a content-based recommendation system for movies, shows, and books. By leveraging techniques like Count Vectorization and TF-IDF, I was able to convert textual data into numerical representations, enabling the system to suggest relevant items to users based on their selection.
+
+#### Potential Applications:
+
+The developed recommendation system has the potential to enhance user experiences on platforms offering movies, shows, and books. It can be integrated into streaming services, online bookstores, and media platforms to provide personalized content suggestions tailored to individual tastes.
+
+#### Limitations:
+
+Despite the progress made, there are limitations to this work. The system relies heavily on the quality and quantity of textual data available. Incomplete or biased datasets may affect the accuracy of recommendations. Additionally, the system does not consider user interactions or feedback, which could further enhance recommendation accuracy.
+
+#### Lessons Learned:
+
+Throughout the project, valuable lessons were learned about the challenges in natural language processing, including the nuances of text representation and the importance of understanding user context. The importance of quality data became evident. Ensuring completeness and lack of bias in the dataset is fundamental for accurate recommendations. The iterative nature of system development taught the value of continuous refinement and adaptation to changing requirements. Recognizing the dynamic nature of user preferences highlighted the necessity for flexible algorithms.
+
+#### Future Research Directions:
+
+As a future step, conducting in-depth research on advanced evaluation techniques could provide deeper insights into the system's performance. Deploying user surveys and feedback forms will enable us to gather direct opinions from users, shaping our understanding of their experiences and preferences. Exploring quantitative metrics, such as Click-Through Rate (CTR), would offer a data-driven perspective on user engagement. It is important to keep an eye on emerging research in the field, as new methods for evaluating recommendation systems are continually being developed. Leveraging a combination of qualitative and quantitative approaches will help in creating a more comprehensive evaluation strategy for the future.
+
+## 8. References
+List articles, blogs, and websites that you have referenced or used in your project.
