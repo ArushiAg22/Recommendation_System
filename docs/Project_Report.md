@@ -269,8 +269,6 @@ This plot shows that this dataset contains around 38 books by William Shakespear
 
   TF-IDF is a numerical statistic that reflects the importance of a word in a document relative to a collection of documents. TF-IDF gives importance to words based on how often they appear in a document but not too commonly across all documents. It's like finding the unique words in a document.
 
-  I created a hybrid (Counter Vectorization + TFIDF) model to give better recommendations.
-
 - How will you train the models?
   - I am using Cosine Similarity to train the models. Since it is recommendation system, we don't train and test data
   - Python packages used - NLTK, PorterStemmer, CountVectorizer, cosine_similarity, TfidfVectorizer, linear_kernel
