@@ -300,4 +300,6 @@ Throughout the project, valuable lessons were learned about the challenges in na
 As a future step, conducting in-depth research on advanced evaluation techniques could provide deeper insights into the system's performance. Deploying user surveys and feedback forms will enable us to gather direct opinions from users, shaping our understanding of their experiences and preferences. Exploring quantitative metrics, such as Click-Through Rate (CTR), would offer a data-driven perspective on user engagement. It is important to keep an eye on emerging research in the field, as new methods for evaluating recommendation systems are continually being developed. Leveraging a combination of qualitative and quantitative approaches will help in creating a more comprehensive evaluation strategy for the future.
 
 ## 8. References
-List articles, blogs, and websites that you have referenced or used in your project.
+https://arnaudmiribel.github.io/streamlit-extras/extras/switch_page_button/
+https://arnaudmiribel.github.io/streamlit-extras/extras/stateful_button/
+https://www.datacamp.com/tutorial/recommender-systems-python
