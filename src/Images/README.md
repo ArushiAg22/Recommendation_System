@@ -1,1 +1,1 @@
-This file contains images used in the streamlit app.
+This folder contains images used in the streamlit app.
