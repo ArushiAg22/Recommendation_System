@@ -1,11 +1,19 @@
-## 1. Title and Author
+# CAPSTONE PROJECT
 
-- Project Title: Recommendation System
-- Prepared for UMBC Data Science Master Degree Capstone by Dr Chaojie (Jay) Wang
-- Author Name: Arushi Agarwal
-- Link to the author's GitHub profile: https://github.com/ArushiAg22
-- Link to the author's LinkedIn progile: https://www.linkedin.com/in/arushi-agarwal/
+## 1. Proposal Title: Recommendation System (Recommendations for Movies, TV Shows and Books)
+
+- **Author Name: Arushi Agarwal**
+  
+- **Semester: Fall 2023**
+  
+- **Prepared for UMBC Data Science Master Degree Capstone by Dr Chaojie (Jay) Wang**
+
+- [![GitHub](https://img.shields.io/badge/GitHub-brown?style=flat-square&logo=github&logoColor=white)](https://github.com/ArushiAg22)
+  
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arushi-agarwal/)
+  
 - Link to your PowerPoint presentation file: TBD
+  
 - Link to your YouTube video: TBD
     
 ## 2. Background
@@ -300,6 +308,6 @@ Throughout the project, valuable lessons were learned about the challenges in na
 As a future step, conducting in-depth research on advanced evaluation techniques could provide deeper insights into the system's performance. Deploying user surveys and feedback forms will enable us to gather direct opinions from users, shaping our understanding of their experiences and preferences. Exploring quantitative metrics, such as Click-Through Rate (CTR), would offer a data-driven perspective on user engagement. It is important to keep an eye on emerging research in the field, as new methods for evaluating recommendation systems are continually being developed. Leveraging a combination of qualitative and quantitative approaches will help in creating a more comprehensive evaluation strategy for the future.
 
 ## 8. References
-- https://arnaudmiribel.github.io/streamlit-extras/extras/switch_page_button/
-- https://arnaudmiribel.github.io/streamlit-extras/extras/stateful_button/
-- https://www.datacamp.com/tutorial/recommender-systems-python
+1. Blackwood, Zachary. Switch page function. https://arnaudmiribel.github.io/streamlit-extras/extras/switch_page_button/
+2. Blackwood, Zachary. Stateful Button. https://arnaudmiribel.github.io/streamlit-extras/extras/stateful_button/
+4. Sharma, Aditya(May 2020). Beginner Tutorial: Recommender Systems in Python. https://www.datacamp.com/tutorial/recommender-systems-python
