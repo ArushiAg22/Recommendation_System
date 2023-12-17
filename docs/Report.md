@@ -12,7 +12,7 @@
   
 - [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arushi-agarwal/)
   
-- Link to your PowerPoint presentation file: [Presentation](https://github.com/DATA-606-2023-FALL-TUESDAY/Agarwal_Arushi/blob/main/docs/Recommendation%20System.pptx)
+- Link to your PowerPoint presentation file: [Presentation](https://github.com/DATA-606-2023-FALL-TUESDAY/Agarwal_Arushi/blob/main/docs/capstone.pptx)
   
 - Link to your YouTube video: TBD
     
