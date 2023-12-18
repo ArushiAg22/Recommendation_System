@@ -8,13 +8,13 @@
   
 - **Prepared for UMBC Data Science Master Degree Capstone by Dr Chaojie (Jay) Wang**
 
-- [![GitHub](https://img.shields.io/badge/GitHub-brown?style=flat-square&logo=github&logoColor=white)](https://github.com/ArushiAg22)
+- [![GitHub](https://img.shields.io/badge/GitHub-brown?style=flat&logo=github&logoColor=white)](https://github.com/ArushiAg22)
   
-- [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arushi-agarwal/)
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arushi-agarwal/)
   
-- Link to your PowerPoint presentation file: [Presentation](https://github.com/DATA-606-2023-FALL-TUESDAY/Agarwal_Arushi/blob/main/docs/capstone.pptx)
+- Link to PowerPoint presentation file: [Presentation](https://github.com/DATA-606-2023-FALL-TUESDAY/Agarwal_Arushi/blob/main/docs/capstone.pptx)
   
-- Link to your YouTube video: TBD
+- Link to YouTube video: [![Youtube](https://img.shields.io/badge/YouTube-red?style=flat&logo=youtube&logoColor=white)](https://youtu.be/m0PdTbXShV8)
     
 ## 2. Background
 
